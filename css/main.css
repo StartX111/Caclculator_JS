@@ -32,9 +32,11 @@ html {
     border-left: 1px solid rgba(255,255,255,0.3);
 }
 
-.top #input {
+.top #output {
+    display: inline-block;
     height:110px;
-    width:5em;
+    /*width:15em;*/
+    font-size: 20px;
     margin: 0 0.5em;
     overflow: hidden;
     float:right;
@@ -42,7 +44,18 @@ html {
     line-height: 2em;
     text-align:right;
     letter-spacing:1px;
+    overflow-wrap: break-word;
 }
+
+/*.output {*/
+    /*width: auto;*/
+    /*height:220px;*/
+    /*margin: auto;*/
+    /*color:#FFF;*/
+    /*border-left: 1px solid rgba(255,255,255,0.3);*/
+    /*background:linear-gradient(#4389A2,#153394);*/
+    /*display: inline;*/
+/*}*/
 
 .keys, .top, .middle {
     overflow:hidden;
@@ -92,3 +105,4 @@ html {
     background:rgba(255,255,255,0.2);
     color:#FFF;
 }
+
