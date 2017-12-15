@@ -36,7 +36,7 @@ function main(event) {
     }
     if (classSymbol === 'operator') {
         stateDot = false; //любой оператор признак что сбросить статус точки для другого числа
-       if ((str.length > 0) && isFinite(str)) {
+       if (isFinite(str)) {
             dataArray[dataArray.length] = str;
             dataArray[dataArray.length] = symbolData;
             str = '';
@@ -48,8 +48,10 @@ function main(event) {
 
     var result = '';
     for (var count=0; count < dataArray.length; count++){ result += dataArray[count]; }
-    if (result.length + str.length > 15){ //меняем шрифт если не влазит строка
-        document.getElementById('output').style.fontSize='8px';
+    if (result.length + str.length > 8){ //меняем шрифт если не влазит строка
+        document.getElementById('output').style.fontSize='0.5em';
+    } else if (8 > result.length + str.length > 18) { //меняем шрифт если не влазит строка
+        document.getElementById('output').style.fontSize = '0.2em';
     }
     document.getElementById('output').innerHTML = result + str; // выводим внужное поле
 }
@@ -69,5 +71,5 @@ function calc() { //тут происходят вычисления
         }
     }
     dataArray = [];
-    str = result;
+	str = result;
 }
