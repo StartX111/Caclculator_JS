@@ -19,7 +19,7 @@ function main(event) {
             //     str += '0';
             // }
             // str += '.';
-            str = (str.length>1)?'.':'0.';
+            str += (str.length>0)?'.':'0.';
             stateDot = true;
         }
         if (isFinite(symbolData)) { //если на прилитело число, добавляем его к строке
@@ -50,8 +50,8 @@ function main(event) {
     for (var count=0; count < dataArray.length; count++){ result += dataArray[count]; }
     if (result.length + str.length > 8){ //меняем шрифт если не влазит строка
         document.getElementById('output').style.fontSize='0.5em';
-    } else if (8 > result.length + str.length > 18) { //меняем шрифт если не влазит строка
-        document.getElementById('output').style.fontSize = '0.2em';
+    } else if (result.length + str.length > 18) { //меняем шрифт если не влазит строка
+        document.getElementById('output').style.fontSize = '5px';
     }
     document.getElementById('output').innerHTML = result + str; // выводим внужное поле
 }
