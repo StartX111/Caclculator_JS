@@ -2,4 +2,4 @@
 Calculator
 
 For run
-https://startx111.github.io/js-course/
+https://startx111.github.io/Caclculator_JS/
